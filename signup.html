@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>IGNIS | Join the Community</title>
+
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/signup-select-additions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <main class="register-page">
+
+
+        <!-- =================================
+             LEFT SIDE
+        ================================== -->
+
+        <section class="register-visual">
+
+            <div class="fire-overlay"></div>
+
+            <div class="visual-content">
+
+                <span class="visual-label">
+                    JOIN IGNIS
+                </span>
+
+                <h1>
+                    Your idea
+                    <span>starts here.</span>
+                </h1>
+
+                <p>
+                    You don't need to have everything figured out.
+                    You just need the willingness to start.
+                </p>
+
+                <div class="visual-line"></div>
+
+                <span class="visual-motto">
+                    FROM IDEAS TO REALITY
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SIGN UP FORM
+        ================================== -->
+
+        <section class="register-form-section">
+
+            <div class="register-container">
+
+
+                <!-- Logo -->
+
+                <a href="index.html" class="register-logo">
+                    IGNIS
+                </a>
+
+
+                <!-- Heading -->
+
+                <div class="register-heading">
+
+                    <span>
+                        CREATE YOUR ACCOUNT
+                    </span>
+
+                    <h2>
+                        Let's build something.
+                    </h2>
+
+                    <p>
+                        Join a community built for people
+                        who want to turn ideas into reality.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                     FORM
+                ================================== -->
+
+                <form
+                    action="create.php"
+                    method="POST"
+                    class="register-form"
+                    id="registerForm"
+                >
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Full name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Tribe -->
+
+                    <div class="form-group">
+
+                        <label for="tribe">
+                            Your tribe
+                        </label>
+
+                        <div class="select-wrap">
+
+                            <select
+                                id="tribe"
+                                name="tribe"
+                                required
+                            >
+                                <option value="" disabled selected>Select your tribe</option>
+                                <option value="AI & Machine Learning">AI & Machine Learning</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Blockchain & Web3">Blockchain & Web3</option>
+                                <option value="Cybersecurity">Cybersecurity</option>
+                                <option value="Cloud & Infrastructure">Cloud & Infrastructure</option>
+                            </select>
+
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                        </div>
+
+                    </div>
+
+
+
+                
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                data-target="password"
+                            >
+                                SHOW
+                            </button>
+
+                        </div>
+
+
+                        <!-- Password strength -->
+
+                        <div class="password-strength">
+
+                            <div class="strength-bar"></div>
+
+                            <span class="strength-text">
+                                Use at least 8 characters
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm password
+                        </label>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Repeat your password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                data-target="confirmPassword"
+                            >
+                                SHOW
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Terms -->
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            name="terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#">
+                                Terms of Service
+                            </a>
+                            and
+                            <a href="#">
+                                Privacy Policy
+                            </a>.
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- Error message -->
+
+                    <p
+                        class="form-message"
+                        id="formMessage"
+                    ></p>
+
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="register-button"
+                    >
+                        CREATE ACCOUNT
+                    </button>
+
+                </form>
+
+
+
+                <!-- Login -->
+
+                <p class="login-text">
+
+                    Already part of IGNIS?
+
+                    <a href="login.html">
+                        Sign in
+                    </a>
+
+                </p>
+
+
+
+                <!-- Footer -->
+
+                <p class="register-footer">
+                    © 2026 IGNIS Community
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script>const passwordInput = document.getElementById("password");
+const confirmPassword = document.getElementById("confirmPassword");
+
+const showPasswordButtons =
+    document.querySelectorAll(".show-password");
+
+const strengthBar =
+    document.querySelector(".strength-bar");
+
+const strengthText =
+    document.querySelector(".strength-text");
+
+const registerForm =
+    document.getElementById("registerForm");
+
+const formMessage =
+    document.getElementById("formMessage");
+
+
+
+/* =========================================
+   SHOW / HIDE PASSWORD
+========================================= */
+
+showPasswordButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const target =
+            document.getElementById(
+                button.dataset.target
+            );
+
+        if (target.type === "password") {
+
+            target.type = "text";
+
+            button.textContent = "HIDE";
+
+        } else {
+
+            target.type = "password";
+
+            button.textContent = "SHOW";
+
+        }
+
+    });
+
+});
+
+
+
+/* =========================================
+   PASSWORD STRENGTH
+========================================= */
+
+passwordInput.addEventListener("input", () => {
+
+    const password = passwordInput.value;
+
+    let strength = 0;
+
+
+    if (password.length >= 8) {
+        strength++;
+    }
+
+    if (/[A-Z]/.test(password)) {
+        strength++;
+    }
+
+    if (/[0-9]/.test(password)) {
+        strength++;
+    }
+
+    if (/[^A-Za-z0-9]/.test(password)) {
+        strength++;
+    }
+
+
+    const width = strength * 25;
+
+    strengthBar.style.width = width + "%";
+
+
+    if (password.length === 0) {
+
+        strengthText.textContent =
+            "Use at least 8 characters";
+
+    }
+
+    else if (strength <= 1) {
+
+        strengthText.textContent =
+            "Weak password";
+
+    }
+
+    else if (strength === 2) {
+
+        strengthText.textContent =
+            "Fair password";
+
+    }
+
+    else if (strength === 3) {
+
+        strengthText.textContent =
+            "Good password";
+
+    }
+
+    else {
+
+        strengthText.textContent =
+            "Strong password";
+
+    }
+
+});
+
+
+
+/* =========================================
+   FORM VALIDATION
+========================================= */
+
+registerForm.addEventListener("submit", function(event) {
+
+    formMessage.textContent = "";
+
+
+    if (
+        passwordInput.value !==
+        confirmPassword.value
+    ) {
+
+        event.preventDefault();
+
+        formMessage.textContent =
+            "Passwords do not match.";
+
+        return;
+
+    }
+
+
+    if (passwordInput.value.length < 8) {
+
+        event.preventDefault();
+
+        formMessage.textContent =
+            "Password must contain at least 8 characters.";
+
+        return;
+
+    }
+
+});</script>
+
+</body>
+
+</html>

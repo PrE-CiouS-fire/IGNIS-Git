@@ -1,0 +1,71 @@
+/* Roadmap hero with subtle dashed-path background pattern */
+.roadmap-hero{
+    padding:130px 6% 30px;
+    background-image: repeating-linear-gradient(100deg, transparent 0 40px, rgba(255,107,0,.06) 40px 42px);
+}
+
+/* Anchor nav links (plain <a> tags, no JS) */
+.filter-tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:70px; }
+.filter-tab{
+    background:var(--dark2); border:1px solid rgba(255,255,255,.08); color:var(--gray);
+    font-family:'Poppins'; font-size:.85rem; font-weight:500; padding:10px 20px; border-radius:30px;
+    transition:.25s; display:inline-block;
+}
+.filter-tab:hover{ border-color:var(--orange); color:#fff; background:rgba(255,107,0,.1); }
+
+/* ============ TRIBE SECTIONS — made clearly distinct ============ */
+.roadmap-section{
+    padding:70px 0 90px; margin-bottom:20px;
+    border-top:3px solid rgba(255,107,0,.25);
+    scroll-margin-top:110px;
+}
+.roadmap-section:first-of-type{ padding-top:0; }
+
+.roadmap-section-head{
+    display:flex; align-items:center; gap:18px; margin-bottom:50px;
+}
+.roadmap-section-head i{
+    font-size:1.6rem; color:var(--black); background:var(--gradient);
+    width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+}
+.roadmap-section-title{
+    font-family:'Poppins'; font-size:clamp(1.8rem,4.5vw,2.6rem); font-weight:700; color:#fff;
+}
+
+/* ============ STAGE BLOCKS ============ */
+.stage-list{ display:flex; flex-direction:column; gap:0; padding-left:20px; border-left:1px solid rgba(255,255,255,.08); }
+.stage-block{
+    position:relative; display:flex; gap:26px; padding:30px 0 30px 30px;
+}
+.stage-block::before{
+    /* small dot marking this stage's position on the vertical line */
+    content:""; position:absolute; left:-25px; top:38px; width:11px; height:11px;
+    background:var(--orange); border-radius:50%; box-shadow:0 0 0 4px var(--black), 0 0 10px rgba(255,107,0,.6);
+}
+.stage-block .roadmap-step{
+    font-family:'Poppins'; font-weight:800; font-size:1.7rem; color:transparent;
+    -webkit-text-stroke:1.5px var(--orange); min-width:50px; flex-shrink:0;
+}
+.stage-block-content h3{ font-family:'Poppins'; font-size:1.2rem; margin-bottom:8px; }
+.stage-desc{ color:var(--gray); font-size:.92rem; line-height:1.6; margin-bottom:16px; }
+
+/* ============ TOPICS — vertical sub-topic list ============ */
+.topic-list{
+    list-style:none; margin:0; padding-left:22px;
+    border-left:2px solid rgba(255,107,0,.2);
+    display:flex; flex-direction:column; gap:10px;
+}
+.topic-list li{
+    position:relative; color:var(--light); font-size:.9rem; line-height:1.5;
+}
+.topic-list li::before{
+    content:""; position:absolute; left:-27px; top:8px; width:6px; height:6px;
+    background:var(--orange2); border-radius:50%;
+}
+
+@media (max-width:600px){
+    .stage-block{ flex-direction:column; gap:10px; padding-left:20px; }
+    .roadmap-section-head{ gap:14px; }
+    .roadmap-section-head i{ width:46px; height:46px; font-size:1.3rem; }
+}

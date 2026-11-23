@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IGNIS | Login</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         LOGIN PAGE
+    ========================== -->
+
+    <main class="login-page">
+
+
+        <!-- =========================
+             LEFT SIDE
+        ========================== -->
+
+        <section class="login-visual">
+
+            <div class="fire-overlay"></div>
+
+            <div class="visual-content">
+
+                <span class="visual-label">
+                    IGNIS COMMUNITY
+                </span>
+
+                <h1>
+                    From Ideas
+                    <span>to Reality.</span>
+                </h1>
+
+                <p>
+                    A place for people in tech who are ready
+                    to stop just thinking about what they could
+                    build and start building it.
+                </p>
+
+                <div class="visual-line"></div>
+
+                <span class="visual-motto">
+                    BUILD. EXECUTE. BECOME.
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RIGHT SIDE
+        ========================== -->
+
+        <section class="login-form-section">
+
+            <div class="login-container">
+
+
+                <!-- Logo -->
+
+                <a href="index.html" class="login-logo">
+                    IGNIS
+                </a>
+
+
+                <!-- Heading -->
+
+                <div class="login-heading">
+
+                    <span>WELCOME BACK</span>
+
+                    <h2>
+                        Good to see you again.
+                    </h2>
+
+                    <p>
+                        Sign in to continue your journey.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     LOGIN FORM
+                ========================== -->
+
+                <form
+                    action="authentication.php"
+                    method="POST"
+                    class="login-form"
+                >
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="#">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                id="togglePassword"
+                                aria-label="Show password"
+                            >
+                                SHOW
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Remember me -->
+
+                    <div class="remember-row">
+
+                        <label class="remember">
+
+                            <input
+                                type="checkbox"
+                                name="remember"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- Login button -->
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        SIGN IN
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- Divider -->
+
+                <div class="divider">
+
+                    <span></span>
+
+                    <p>OR</p>
+
+                    <span></span>
+
+                </div>
+
+
+
+                <!-- Register -->
+
+                <p class="register-text">
+
+                    Don't have an IGNIS account?
+
+                    <a href="signup.html">
+                        Create one
+                    </a>
+
+                </p>
+
+
+
+                <!-- Footer -->
+
+                <p class="login-footer">
+                    © 2026 IGNIS Community
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        const passwordInput = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
+
+togglePassword.addEventListener("click", function () {
+
+    if (passwordInput.type === "password") {
+
+        passwordInput.type = "text";
+
+        togglePassword.textContent = "HIDE";
+
+    } else {
+
+        passwordInput.type = "password";
+
+        togglePassword.textContent = "SHOW";
+
+    }
+
+});
+    </script>
+
+</body>
+
+</html>

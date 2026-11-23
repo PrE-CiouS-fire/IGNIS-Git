@@ -1,0 +1,765 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --black: #050505;
+
+    --dark: #0b0b0b;
+
+    --orange: #ff6b00;
+
+    --fire: #ff3b1f;
+
+    --gold: #ffb000;
+
+    --white: #ffffff;
+
+    --gray: #999999;
+
+    --border: rgba(255,255,255,.1);
+
+}
+
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--black);
+
+    color: var(--white);
+
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.register-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr .85fr;
+
+}
+
+
+/* =========================================
+   LEFT VISUAL
+========================================= */
+
+.register-visual {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 80px;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.75)
+        ),
+
+        url("images/ignis-hero.png")
+
+        center / cover
+
+        no-repeat;
+
+}
+
+
+.fire-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,90,0,.2),
+            transparent 55%
+        );
+
+}
+
+
+/* =========================================
+   VISUAL CONTENT
+========================================= */
+
+.visual-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 620px;
+
+}
+
+
+.visual-label {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: var(--gold);
+
+    font-size: .75rem;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+}
+
+
+.visual-content h1 {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(4rem, 7vw, 7rem);
+
+    line-height: .95;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.visual-content h1 span {
+
+    display: block;
+
+    color: var(--orange);
+
+    text-shadow:
+
+        0 0 15px rgba(255,90,0,.5),
+
+        0 0 40px rgba(255,60,0,.25);
+
+}
+
+
+.visual-content p {
+
+    max-width: 500px;
+
+    color: #ccc;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+}
+
+
+.visual-line {
+
+    width: 70px;
+
+    height: 3px;
+
+    margin: 35px 0 25px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--fire),
+            var(--gold)
+        );
+
+}
+
+
+.visual-motto {
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: .75rem;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+
+/* =========================================
+   FORM SECTION
+========================================= */
+
+.register-form-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 60px 8%;
+
+    background: var(--dark);
+
+}
+
+
+.register-container {
+
+    width: 100%;
+
+    max-width: 440px;
+
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.register-logo {
+
+    display: inline-block;
+
+    margin-bottom: 50px;
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    text-decoration: none;
+
+}
+
+
+.register-logo::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 7px;
+
+    height: 7px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    box-shadow:
+
+        0 0 10px var(--orange),
+
+        0 0 20px var(--orange);
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.register-heading span {
+
+    color: var(--orange);
+
+    font-size: .7rem;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+
+.register-heading h2 {
+
+    /* margin-top: 12px; */
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 2.2rem;
+
+    line-height: 1.2;
+
+}
+
+
+.register-heading p {
+
+    /* margin-top: 12px; */
+
+    color: var(--gray);
+
+    font-size: .9rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.register-form {
+
+    /* margin-top: 35px; */
+
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #ddd;
+
+    font-size: .8rem;
+
+    font-weight: 500;
+
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 3px;
+
+    outline: none;
+
+    background: #0e0e0e;
+
+    color: #fff;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: .9rem;
+
+    transition: .3s ease;
+
+}
+
+
+.form-group input::placeholder {
+
+    color: #555;
+
+}
+
+
+.form-group input:focus {
+
+    border-color: var(--orange);
+
+    box-shadow:
+
+        0 0 0 3px rgba(255,107,0,.08);
+
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.password-input {
+
+    position: relative;
+
+}
+
+
+.password-input input {
+
+    padding-right: 70px;
+
+}
+
+
+.show-password {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: none;
+
+    color: #777;
+
+    font-size: .65rem;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+}
+
+
+.show-password:hover {
+
+    color: var(--orange);
+
+}
+
+
+/* =========================================
+   PASSWORD STRENGTH
+========================================= */
+
+.password-strength {
+
+    margin-top: 8px;
+
+}
+
+
+.strength-bar {
+
+    width: 0%;
+
+    height: 3px;
+
+    background: var(--orange);
+
+    transition: .3s ease;
+
+}
+
+
+.strength-text {
+
+    display: block;
+
+    margin-top: 6px;
+
+    color: #555;
+
+    font-size: .65rem;
+
+}
+
+
+/* =========================================
+   TERMS
+========================================= */
+
+.terms {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+    color: #777;
+
+    font-size: .75rem;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+
+}
+
+
+.terms input {
+
+    margin-top: 4px;
+
+    accent-color: var(--orange);
+
+}
+
+
+.terms a {
+
+    color: var(--orange);
+
+    text-decoration: none;
+
+}
+
+
+.terms a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================
+   FORM MESSAGE
+========================================= */
+
+.form-message {
+
+    min-height: 20px;
+
+    margin-bottom: 10px;
+
+    color: #ff5a3c;
+
+    font-size: .75rem;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.register-button {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--fire),
+            var(--orange),
+            var(--gold)
+        );
+
+    box-shadow:
+
+        0 10px 30px rgba(255,90,0,.15);
+
+    transition: .3s ease;
+
+}
+
+
+.register-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+
+        0 15px 35px rgba(255,90,0,.3);
+
+}
+
+
+/* =========================================
+   LOGIN LINK
+========================================= */
+
+.login-text {
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: .8rem;
+
+}
+
+
+.login-text a {
+
+    color: var(--orange);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.login-text a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.register-footer {
+
+    margin-top: 45px;
+
+    text-align: center;
+
+    color: #444;
+
+    font-size: .7rem;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .register-page {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .register-visual {
+
+        min-height: 420px;
+
+        padding: 60px 8%;
+
+    }
+
+
+    .visual-content h1 {
+
+        font-size: 4.5rem;
+
+    }
+
+
+    .register-form-section {
+
+        min-height: auto;
+
+        padding: 80px 8%;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .register-visual {
+
+        min-height: 360px;
+
+        padding: 50px 25px;
+
+    }
+
+
+    .visual-content h1 {
+
+        font-size: 3.5rem;
+
+    }
+
+
+    .visual-content p {
+
+        font-size: .85rem;
+
+    }
+
+
+    .register-form-section {
+
+        padding: 60px 25px;
+
+    }
+
+
+    .register-heading h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+}
